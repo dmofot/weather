@@ -1,11 +1,12 @@
+import sys
 import requests
 import csv
 from dateutil.rrule import *
 from dateutil.parser import *
 
 # Variables
-daySt = "20140701" # state date
-dayEnd = "20140706" # end date
+daySt = sys.argv[1] # start date in yyyymmdd format, 20140710
+dayEnd = sys.argv[2] # end date in yyyymmdd format, 20140712
 outPath = '/Users/dtodd/Documents/Work/Weather/' # output path
 station = 'KDEW' # weather station ID
 api = 'b316a72d2e91b2e7' # developer API key
